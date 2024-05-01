@@ -1,3 +1,6 @@
+import SimpleLightbox from 'simplelightbox';
+import 'simplelightbox/dist/simple-lightbox.min.css';
+
 const images = [
   {
     preview:
@@ -80,10 +83,8 @@ const imagesHtml = Array.from({ length: images.length }, (_, index) => {
   return li;
 });
 ul.append(...imagesHtml);
-import SimpleLightbox from 'simplelightbox';
-import 'simplelightbox/dist/simple-lightbox.min.css';
 let gallery = new SimpleLightbox('.gallery a', {
   captions: true,
   captionsData: 'alt',
-  captionsDelay: 250, //прокоментуйте чому зміна значення затримки в цьому місці ні на що не впливає?
+  captionDelay: 250,
 });
